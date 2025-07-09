@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import RadarBackground from './RadarBackground';
+import PuzzlePieceDrift from './PuzzlePieceDrift';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -36,8 +36,8 @@ const HeroSection: React.FC = () => {
         background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
       }}
     >
-      {/* Radar Background */}
-      <RadarBackground />
+      {/* Puzzle Piece Drift Background */}
+      <PuzzlePieceDrift />
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
