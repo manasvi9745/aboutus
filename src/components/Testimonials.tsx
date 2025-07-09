@@ -62,7 +62,6 @@ const Testimonials: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-4">
           <h2 className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-4">
             Hope Found Again
           </h2>
@@ -125,7 +124,6 @@ const Testimonials: React.FC = () => {
                     {/* User Info */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                       <div>
-                        <h4 className="font-nunito font-bold text-teal-600 text-lg">
                         <h4 className="font-nunito font-bold text-primary-600 text-lg">
                           {testimonials[currentIndex].name}
                         </h4>
