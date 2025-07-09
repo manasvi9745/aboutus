@@ -108,7 +108,6 @@ const WhyChooseUs: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-4">
-          <h2 className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-4">
             Why Choose Lost & Found?
           </h2>
           <p className="text-xl font-poppins text-primary-700 max-w-3xl mx-auto">
@@ -152,7 +151,6 @@ const WhyChooseUs: React.FC = () => {
                     />
                   </motion.div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-nunito font-semibold text-teal-600 mb-2">
                     <h3 className="text-xl font-nunito font-semibold text-primary-600 mb-2">
                       {feature.title}
                     </h3>
