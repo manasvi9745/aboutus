@@ -253,3 +253,5 @@ const JoinCommunity: React.FC = () => {
 };
 
 export default JoinCommunity;
+  )
+}
