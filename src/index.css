@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Radar glow effect */
+.radar-glow { 
+  filter: blur(6px) drop-shadow(0 0 6px rgba(90,130,126,0.4)); 
+}
+
 /* Hero Section Styles */
 .hero {
   height: 100vh;
