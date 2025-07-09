@@ -8,6 +8,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import TeamSection from './components/TeamSection';
 import Testimonials from './components/Testimonials';
 import JoinCommunity from './components/JoinCommunity';
+import Footer from './components/Footer';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -30,6 +31,7 @@ function App() {
       <TeamSection />
       <Testimonials />
       <JoinCommunity />
+      <Footer />
     </div>
   );
 }

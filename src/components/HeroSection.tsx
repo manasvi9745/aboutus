@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import PuzzlePieceDrift from './PuzzlePieceDrift';
+import { ChevronDown } from 'lucide-react';
+import AuroraCanvas from './AuroraCanvas';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection: React.FC = () => {
@@ -13,14 +14,18 @@ const HeroSection: React.FC = () => {
     const hero = heroRef.current;
     if (!hero) return;
 
-    // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
 
-    if (prefersReducedMotion) {
-      return;
-    }
+    // Pin hero section for first 70vh
+    ScrollTrigger.create({
+      trigger: hero,
+      start: 'top top',
+      end: '+=70%',
+      pin: true,
+      pinSpacing: false
+    });
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
@@ -30,45 +35,57 @@ const HeroSection: React.FC = () => {
     <section 
       ref={heroRef}
       className="hero relative overflow-hidden flex items-center justify-center"
-      style={{ 
-        height: '100vh',
-        perspective: '1000px',
-        background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
-      }}
+      style={{ height: '100vh' }}
     >
-      {/* Puzzle Piece Drift Background */}
-      <PuzzlePieceDrift />
+      {/* Aurora Background */}
+      <AuroraCanvas />
 
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div 
-          className="absolute w-96 h-96 rounded-full"
-          style={{
-            background: 'radial-gradient(circle, #4361ee 0%, transparent 70%)',
-            top: '20%',
-            left: '20%'
-          }}
-        />
-        <div 
-          className="absolute w-96 h-96 rounded-full"
-          style={{
-            background: 'radial-gradient(circle, #4cc9f0 0%, transparent 70%)',
-            bottom: '20%',
-            right: '20%'
-          }}
-        />
-      </div>
-
-      {/* Title and Subtitle */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
-        <h1 className="text-5xl md:text-7xl font-nunito font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-6 leading-tight text-center">
-          Where Lost <span className="text-secondary-500">Meets</span> Found
-        </h1>
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <motion.h1
+          className="text-5xl md:text-7xl font-nunito font-bold mb-6 leading-tight bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          Where Lost <span className="text-[#9BE8E1]">Meets</span> Found
+        </motion.h1>
         
-        <p className="text-xl md:text-2xl font-poppins text-primary-600 leading-relaxed text-center max-w-4xl">
+        <motion.p
+          className="text-xl md:text-2xl font-poppins text-white/90 leading-relaxed mb-8 max-w-4xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
           Connecting communities through compassion, one lost item at a time.
           We're building a world where losing something doesn't mean losing hope.
-        </p>
+        </motion.p>
+
+        <motion.button
+          className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-nunito font-bold rounded-xl text-lg transition-all duration-300 hover:scale-105"
+          style={{ 
+            boxShadow: '0 0 10px #9BE8E1',
+            filter: 'drop-shadow(0 0 10px #9BE8E1)'
+          }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          whileHover={{ 
+            scale: 1.05,
+            boxShadow: '0 0 20px #9BE8E1'
+          }}
+        >
+          Join Our Community
+        </motion.button>
+
+        {/* Scroll Cue */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <ChevronDown className="text-white/70" size={32} />
+        </motion.div>
       </div>
     </section>
   );

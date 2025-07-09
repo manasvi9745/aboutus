@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Radar glow effect */
-.radar-glow { 
-  filter: blur(6px) drop-shadow(0 0 6px rgba(90,130,126,0.4)); 
+/* Custom Animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
 }
 
 /* Hero Section Styles */
@@ -14,86 +33,23 @@
   perspective: 1000px;
 }
 
-/* Card Wrapper Styles */
-.card-wrapper {
-  width: 180px;
-  height: 260px;
-  transform-style: preserve-3d;
-}
-
-.card-wrapper.card1 {
-  --tx: -120px;
-  --ty: -40px;
-}
-
-.card-wrapper.card2 {
-  --tx: 130px;
-  --ty: 40px;
-}
-
-/* Card Styles */
-.card {
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-}
-
-.card-face {
-  backface-visibility: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-}
-
-.card-front {
-  transform: rotateY(0deg);
-}
-
-/* Team Grid Responsive */
-.team-grid {
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
-}
-
-@media (max-width: 600px) {
-  .team-grid {
-    flex-direction: column !important;
-    align-items: center;
-  }
-  
-  .team-card-final,
-  .team-card-clone {
-    width: 100% !important;
-    max-width: 320px !important;
-  }
-}
-
 /* Accessibility - Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
-  .card-wrapper {
-    animation: none !important;
-  }
-  
-  .hero {
-    position: static !important;
-  }
-  
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  
+  .animate-gradient-x {
+    animation: none !important;
+  }
 }
 
 /* Performance Optimizations */
-.card-wrapper,
-.team-card-final,
-.team-card-clone {
+.hero,
+.team-card,
+.testimonial-card {
   contain: layout style paint;
   backface-visibility: hidden;
 }
@@ -101,4 +57,121 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Utility classes */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backdrop-blur-strong {
+  backdrop-filter: blur(20px);
+}
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Gradient text utilities */
+.gradient-text-blue-purple {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button animations */
+.btn-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .8;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Text selection */
+::selection {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: inherit;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }
