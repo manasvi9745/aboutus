@@ -50,7 +50,6 @@ const JoinCommunity: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-4">
-          <h2 className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-4">
             Join Our Community
           </h2>
           <p className="text-xl font-poppins text-primary-700 max-w-2xl mx-auto">
@@ -66,7 +65,6 @@ const JoinCommunity: React.FC = () => {
             viewport={{ once: true }}
           >
             <Users className="text-sage-500 mr-2" size={20} />
-            <span className="font-nunito font-semibold text-teal-600">
             <span className="font-nunito font-semibold text-primary-600">
               You'll be user #{(userCount + 1).toLocaleString()} to join our mission
             </span>
@@ -253,5 +251,3 @@ const JoinCommunity: React.FC = () => {
 };
 
 export default JoinCommunity;
-  )
-}

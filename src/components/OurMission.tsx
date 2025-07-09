@@ -113,7 +113,6 @@ const OurMission: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <p className="text-xl md:text-2xl font-poppins text-teal-600 font-medium leading-relaxed">
-                <p className="text-xl md:text-2xl font-poppins text-primary-600 font-medium leading-relaxed">
                   To make reuniting with your lost belongings <span className="font-bold text-secondary-600">easy, human, and fast.</span>
                 </p>
               </motion.div>
@@ -156,5 +155,3 @@ const OurMission: React.FC = () => {
 };
 
 export default OurMission;
-  )
-}
