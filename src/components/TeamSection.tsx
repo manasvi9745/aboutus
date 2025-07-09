@@ -27,7 +27,6 @@ const TeamSection: React.FC = () => {
   return (
     <section 
       id="team"
-      className="py-20 bg-gradient-to-br from-teal-50 to-sage-50 relative overflow-hidden"
       className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden"
     >
       {/* Background Pattern */}
@@ -59,7 +58,6 @@ const TeamSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-nunito font-bold mb-4 bg-gradient-to-r from-teal-600 to-sage-600 bg-clip-text text-transparent">
           <h2 className="text-4xl md:text-5xl font-nunito font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Our Dedicated Team
           </h2>
