@@ -191,13 +191,18 @@ const WhyChooseUs: React.FC = () => {
           <div className="flex justify-center">
             <div className="relative">
               <motion.div 
-                className="w-80 h-96 bg-gray-900 rounded-3xl p-2 shadow-2xl"
-                animate={{
-                  boxShadow: activeFeature === 0 || activeFeature === 2 
-                    ? '0 0 30px #9BE8E1' 
-                    : '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                className="w-80 h-96 bg-gray-900 rounded-3xl p-2"
+                style={{
+                  boxShadow: '0 0 30px rgba(139, 92, 246, 0.4)'
                 }}
-                transition={{ duration: 0.5 }}
+                animate={{
+                  boxShadow: [
+                    '0 0 30px rgba(139, 92, 246, 0.4)',
+                    '0 0 40px rgba(139, 92, 246, 0.6)',
+                    '0 0 30px rgba(139, 92, 246, 0.4)'
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
                   <div className="bg-blue-500 px-4 py-3 flex items-center justify-between">

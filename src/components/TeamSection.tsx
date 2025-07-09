@@ -88,7 +88,7 @@ interface TeamCardProps {
 const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
   return (
     <motion.div
-      className="w-72 h-96 rounded-2xl bg-white/20 backdrop-blur border border-white/30 shadow-xl relative overflow-hidden group"
+      className="w-72 h-96 rounded-2xl bg-white/20 backdrop-blur border border-grey-100 relative overflow-hidden group"
       style={{ perspective: '1000px' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -98,6 +98,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         scale: 1.05, 
         rotateX: 6, 
         rotateY: -6,
+        boxShadow: '0 0 20px rgba(139, 92, 246, 0.5)',
         transition: { duration: 0.3 }
       }}
     >
@@ -123,7 +124,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         
         <div className="inline-block mb-4">
           <motion.span 
-            className="px-3 py-1 rounded-full text-blue-700 font-semibold text-sm bg-blue-100/80 border border-blue-200/50"
+            className="px-3 py-1 rounded-full text-blue-700 font-semibold text-sm bg-blue-100 border border-blue-200/50"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >

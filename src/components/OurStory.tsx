@@ -17,8 +17,9 @@ const OurStory: React.FC = () => {
       gsap.fromTo(underline, 
         { width: 0 },
         {
-          width: '100%',
+          width: '80%',
           duration: 1.2,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: underline,
             start: 'top 80%',
@@ -35,6 +36,7 @@ const OurStory: React.FC = () => {
           x: 0,
           opacity: 1,
           duration: 1,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: illustration,
             start: 'top 70%',
@@ -55,7 +57,7 @@ const OurStory: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+    <section className="py-20 bg-blue-50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Illustration */}
@@ -159,7 +161,7 @@ const OurStory: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                What began as a college side project is now a purpose-led platform helping people across campuses and cities rediscover not just their belongings — but also <span className="font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded">trust, kindness, and hope</span>.
+                What began as a college side project is now a purpose-led platform helping people across campuses and cities rediscover not just their belongings — but also <span className="font-semibold text-purple-600 bg-blue-100 px-2 py-1 rounded">trust, kindness, and hope</span>.
               </motion.p>
 
               <motion.p
@@ -170,7 +172,7 @@ const OurStory: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                We didn't build a startup. We built a <span className="text-purple-600 bg-purple-50 px-2 py-1 rounded">quiet helping hand</span> — one that shows up when you need it most.
+                We didn't build a startup. We built a <span className="text-purple-600 bg-blue-100 px-2 py-1 rounded">quiet helping hand</span> — one that shows up when you need it most.
               </motion.p>
             </div>
           </motion.div>

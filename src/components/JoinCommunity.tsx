@@ -132,7 +132,7 @@ const JoinCommunity: React.FC = () => {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full pl-12 pr-12 py-3 border-2 border-gray-300 rounded-xl font-poppins focus:outline-none transition-all duration-300"
+                    className="w-full pl-12 pr-12 py-3 border-2 border-gray-300 rounded-xl font-poppins focus:outline-none focus:border-blue-500 transition-all duration-300"
                     placeholder="Enter your name"
                     variants={inputVariants}
                     animate={focusedField === 'name' ? 'focus' : 'blur'}
@@ -164,7 +164,7 @@ const JoinCommunity: React.FC = () => {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full pl-12 pr-12 py-3 border-2 border-gray-300 rounded-xl font-poppins focus:outline-none transition-all duration-300"
+                    className="w-full pl-12 pr-12 py-3 border-2 border-gray-300 rounded-xl font-poppins focus:outline-none focus:border-blue-500 transition-all duration-300"
                     placeholder="your.email@example.com"
                     variants={inputVariants}
                     animate={focusedField === 'email' ? 'focus' : 'blur'}
@@ -196,7 +196,7 @@ const JoinCommunity: React.FC = () => {
                     onFocus={() => setFocusedField('reason')}
                     onBlur={() => setFocusedField(null)}
                     rows={4}
-                    className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-xl font-poppins focus:outline-none transition-all duration-300 resize-none"
+                    className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-xl font-poppins focus:outline-none focus:border-blue-500 transition-all duration-300 resize-none"
                     placeholder="Tell us what motivates you to be part of this community..."
                     variants={inputVariants}
                     animate={focusedField === 'reason' ? 'focus' : 'blur'}
@@ -206,20 +206,15 @@ const JoinCommunity: React.FC = () => {
 
               <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-nunito font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-nunito font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                style={{
+                  boxShadow: '0 0 15px rgba(59, 130, 246, 0.4)'
+                }}
                 whileHover={{ 
                   scale: 1.06,
-                  boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)'
+                  boxShadow: '0 0 25px rgba(59, 130, 246, 0.6)'
                 }}
                 whileTap={{ scale: 0.98 }}
-                animate={{
-                  boxShadow: [
-                    '0 4px 14px 0 rgba(59, 130, 246, 0.39)',
-                    '0 6px 20px 0 rgba(168, 85, 247, 0.39)',
-                    '0 4px 14px 0 rgba(59, 130, 246, 0.39)'
-                  ]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
               >
                 Join the Movement
               </motion.button>

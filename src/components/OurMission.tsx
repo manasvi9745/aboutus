@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const OurMission: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-20 bg-purple-50">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Illustration */}
@@ -18,16 +18,16 @@ const OurMission: React.FC = () => {
               <motion.div
                 className="w-80 h-64 bg-white rounded-2xl flex items-center justify-center relative overflow-hidden"
                 style={{
-                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                  boxShadow: '0 25px 50px -12px rgba(139, 92, 246, 0.4)'
                 }}
                 animate={{ 
                   boxShadow: [
-                    '0 25px 50px -12px rgba(59, 130, 246, 0.4)',
-                    '0 25px 50px -12px rgba(168, 85, 247, 0.4)',
-                    '0 25px 50px -12px rgba(59, 130, 246, 0.4)'
+                    '0 25px 50px -12px rgba(59, 130, 246, 0.5)',
+                    '0 25px 50px -12px rgba(168, 85, 247, 0.5)',
+                    '0 25px 50px -12px rgba(59, 130, 246, 0.5)'
                   ]
                 }}
-                transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-30"></div>
 
@@ -41,8 +41,8 @@ const OurMission: React.FC = () => {
 
                   <motion.div
                     className="flex flex-col items-center"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
+                    animate={{ scale: [1.0, 1.1, 1.0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center shadow-lg">
                       <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ const OurMission: React.FC = () => {
                 Our mission is simple:
               </p>
               
-              <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl p-6 shadow-lg relative overflow-hidden mb-6">
+              <div className="bg-gradient-to-r from-purple-100 to-blue-100 rounded-2xl p-6 shadow-lg relative overflow-hidden mb-6">
                 <p className="text-xl md:text-2xl font-poppins text-blue-700 font-medium leading-relaxed">
                   To make reuniting with your lost belongings <span className="font-bold text-purple-600">easy, human, and fast.</span>
                 </p>

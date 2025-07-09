@@ -101,7 +101,7 @@ const Testimonials: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                className="bg-gradient-to-br from-blue-50 to-white p-8 md:p-12"
+                className="bg-gradient-to-br from-blue-50 to-white p-8 md:p-12 border-t-4 border-purple-500"
               >
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="flex-shrink-0">
@@ -136,8 +136,8 @@ const Testimonials: React.FC = () => {
                       <div className="mt-4 md:mt-0 flex gap-4">
                         <motion.div 
                           className="bg-purple-200 px-3 py-1 rounded-full"
-                          animate={{ rotateY: [0, 360] }}
-                          transition={{ duration: 0.6, delay: 0.3 }}
+                          animate={{ rotateY: [0, 180, 360] }}
+                          transition={{ duration: 1, delay: 0.3 }}
                         >
                           <span className="text-xs font-nunito font-semibold text-purple-700">
                             {testimonials[currentIndex].item}

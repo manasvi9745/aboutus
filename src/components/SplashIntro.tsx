@@ -58,14 +58,14 @@ const SplashIntro: React.FC<SplashIntroProps> = ({ onComplete }) => {
           <motion.h1
             className="text-4xl md:text-6xl font-nunito font-bold text-white text-center px-4"
             style={{ 
-              textShadow: '0 0 8px #9BE8E1',
-              filter: 'drop-shadow(0 0 8px #9BE8E1)'
+              textShadow: '0 0 12px #00FFFF, 0 0 24px #00FFFF',
+              filter: 'drop-shadow(0 0 12px #00FFFF)'
             }}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            Hello there, we are Lost & Found
+            Hello there, we are Reunify
           </motion.h1>
         </motion.div>
       )}
