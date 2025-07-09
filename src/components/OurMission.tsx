@@ -78,7 +78,7 @@ const OurMission: React.FC = () => {
             viewport={{ once: true }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-8 relative"
+              className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-8 relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -86,7 +86,7 @@ const OurMission: React.FC = () => {
             >
               Our Mission
               <motion.div
-                className="absolute bottom-0 left-0 h-1 bg-sage-500 rounded-full"
+                className="absolute bottom-0 left-0 h-1 bg-secondary-500 rounded-full"
                 initial={{ width: 0 }}
                 whileInView={{ width: '100%' }}
                 transition={{ duration: 1.2, delay: 0.8 }}
@@ -96,7 +96,7 @@ const OurMission: React.FC = () => {
 
             <div className="space-y-6">
               <motion.p
-                className="text-2xl font-nunito font-semibold text-teal-600 mb-6"
+                className="text-2xl font-nunito font-semibold text-primary-600 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -106,19 +106,20 @@ const OurMission: React.FC = () => {
               </motion.p>
               
               <motion.div
-                className="bg-gradient-to-r from-sage-100 to-sage-200 rounded-2xl p-6 shadow-lg relative overflow-hidden mb-6"
+                className="bg-gradient-to-r from-secondary-100 to-secondary-200 rounded-2xl p-6 shadow-lg relative overflow-hidden mb-6"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
                 <p className="text-xl md:text-2xl font-poppins text-teal-600 font-medium leading-relaxed">
-                  To make reuniting with your lost belongings <span className="font-bold text-sage-600">easy, human, and fast.</span>
+                <p className="text-xl md:text-2xl font-poppins text-primary-600 font-medium leading-relaxed">
+                  To make reuniting with your lost belongings <span className="font-bold text-secondary-600">easy, human, and fast.</span>
                 </p>
               </motion.div>
 
               <motion.p
-                className="text-lg font-poppins text-teal-700 leading-relaxed"
+                className="text-lg font-poppins text-primary-700 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -128,7 +129,7 @@ const OurMission: React.FC = () => {
               </motion.p>
               
               <motion.p
-                className="text-lg font-poppins text-teal-700 leading-relaxed"
+                className="text-lg font-poppins text-primary-700 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -138,7 +139,7 @@ const OurMission: React.FC = () => {
               </motion.p>
 
               <motion.p
-                className="text-lg font-poppins text-teal-600 font-semibold leading-relaxed"
+                className="text-lg font-poppins text-primary-600 font-semibold leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}

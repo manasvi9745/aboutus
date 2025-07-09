@@ -8,46 +8,30 @@ export default {
         'poppins': ['Poppins', 'sans-serif'],
       },
       colors: {
-        // New color theme
-        'teal': {
-          50: '#F0F9F8',
-          100: '#E1F3F1',
-          200: '#C3E7E3',
-          300: '#A5DBD5',
-          400: '#87CFC7',
-          500: '#5A827E', // Primary dark teal
-          600: '#4A6B68',
-          700: '#3A5452',
-          800: '#2A3D3C',
-          900: '#1A2626',
+        // Blue, Light Purple, and White theme
+        'primary': {
+          50: '#EFF6FF',   // Very light blue
+          100: '#DBEAFE',  // Light blue
+          200: '#BFDBFE',  // Medium light blue
+          300: '#93C5FD',  // Medium blue
+          400: '#60A5FA',  // Blue
+          500: '#3B82F6',  // Primary blue
+          600: '#2563EB',  // Dark blue
+          700: '#1D4ED8',  // Darker blue
+          800: '#1E40AF',  // Very dark blue
+          900: '#1E3A8A',  // Darkest blue
         },
-        'sage': {
-          50: '#F5F9F6',
-          100: '#EBF3ED',
-          200: '#D7E7DB',
-          300: '#C3DBC9',
-          400: '#AFCFB7',
-          500: '#84AE92', // Medium green
-          600: '#6A8E75',
-          700: '#506E58',
-          800: '#364E3B',
-          900: '#1C2E1E',
-        },
-        'mint': {
-          50: '#FAFFCA', // Pale yellow
-          100: '#F8FDB8',
-          200: '#F5FBA6',
-          300: '#F2F994',
-          400: '#EFF782',
-          500: '#B9D4AA', // Light green
-          600: '#94AA88',
-          700: '#6F8066',
-          800: '#4A5544',
-          900: '#252B22',
-        },
-        'forest': {
-          100: '#5A827E',
-          200: '#4A6B68',
+        'secondary': {
+          50: '#FAF5FF',   // Very light purple
+          100: '#F3E8FF',  // Light purple
+          200: '#E9D5FF',  // Medium light purple
+          300: '#D8B4FE',  // Medium purple
+          400: '#C084FC',  // Purple
+          500: '#A855F7',  // Primary purple
+          600: '#9333EA',  // Dark purple
+          700: '#7C3AED',  // Darker purple
+          800: '#6B21A8',  // Very dark purple
+          900: '#581C87',  // Darkest purple
         }
       },
       animation: {

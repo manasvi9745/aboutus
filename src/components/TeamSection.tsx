@@ -5,21 +5,21 @@ import { Mail, Linkedin, Phone } from 'lucide-react';
 const TeamSection: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Aditi Sharma',
-      role: 'Product Lead',
+      name: 'Soni Kumari',
+      role: 'BTech 4th Year Student',
       bio: 'Passionate about creating user-centered solutions that make a difference.',
       image: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      email: 'aditi@lostandfound.com',
-      linkedin: 'https://linkedin.com/in/aditi-sharma',
+      email: 'soni@lostandfound.com',
+      linkedin: 'https://linkedin.com/in/soni-kumari',
       phone: '+1 (555) 123-4567'
     },
     {
-      name: 'Rohan Mehta',
-      role: 'DevOps Guru',
-      bio: 'Builds scalable infrastructure that keeps everything running smoothly.',
+      name: 'Manasvi Singh',
+      role: 'BTech 4th Year Student',
+      bio: 'Turning bold ideas into AI‑powered solutions that matter.',
       image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      email: 'rohan@lostandfound.com',
-      linkedin: 'https://linkedin.com/in/rohan-mehta',
+      email: 'manasvi@lostandfound.com',
+      linkedin: 'https://linkedin.com/in/manasvi-singh',
       phone: '+1 (555) 123-4568'
     }
   ];
@@ -28,13 +28,14 @@ const TeamSection: React.FC = () => {
     <section 
       id="team"
       className="py-20 bg-gradient-to-br from-teal-50 to-sage-50 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div 
           className="absolute w-96 h-96 rounded-full"
           style={{
-            background: 'radial-gradient(circle, #5A827E 0%, transparent 70%)',
+            background: 'radial-gradient(circle, #3B82F6 0%, transparent 70%)',
             top: '20%',
             left: '20%'
           }}
@@ -42,7 +43,7 @@ const TeamSection: React.FC = () => {
         <div 
           className="absolute w-96 h-96 rounded-full"
           style={{
-            background: 'radial-gradient(circle, #84AE92 0%, transparent 70%)',
+            background: 'radial-gradient(circle, #A855F7 0%, transparent 70%)',
             bottom: '20%',
             right: '20%'
           }}
@@ -59,9 +60,10 @@ const TeamSection: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-nunito font-bold mb-4 bg-gradient-to-r from-teal-600 to-sage-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-nunito font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Our Dedicated Team
           </h2>
-          <p className="text-xl font-poppins text-teal-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl font-poppins text-blue-700 max-w-3xl mx-auto leading-relaxed">
             The passionate individuals working behind the scenes to reunite lost items with their owners
           </p>
         </motion.div>
@@ -111,7 +113,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         <div 
           className="absolute w-32 h-32 rounded-full"
           style={{
-            background: 'radial-gradient(circle, #5A827E 0%, transparent 70%)',
+            background: 'radial-gradient(circle, #3B82F6 0%, transparent 70%)',
             top: '20%',
             left: '30%'
           }}
@@ -119,7 +121,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         <div 
           className="absolute w-32 h-32 rounded-full"
           style={{
-            background: 'radial-gradient(circle, #84AE92 0%, transparent 70%)',
+            background: 'radial-gradient(circle, #A855F7 0%, transparent 70%)',
             bottom: '20%',
             right: '30%'
           }}
@@ -130,7 +132,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         {/* Avatar */}
         <div className="flex justify-center mb-6">
           <motion.div 
-            className="w-24 h-24 rounded-full bg-gradient-to-br from-teal-100 to-sage-100 p-1 shadow-lg"
+            className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 p-1 shadow-lg"
             whileHover={{ y: -4 }}
             transition={{ duration: 0.3 }}
           >
@@ -144,14 +146,14 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         </div>
 
         {/* Name */}
-        <h3 className="text-xl font-nunito font-bold text-teal-800 mb-3">
+        <h3 className="text-xl font-nunito font-bold text-blue-800 mb-3">
           {member.name}
         </h3>
         
         {/* Role Badge */}
         <div className="inline-block mb-4">
           <motion.span 
-            className="px-3 py-1 rounded-full text-teal-700 font-semibold text-sm bg-teal-100/80 border border-teal-200/50"
+            className="px-3 py-1 rounded-full text-blue-700 font-semibold text-sm bg-blue-100/80 border border-blue-200/50"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
@@ -160,7 +162,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         </div>
         
         {/* Bio */}
-        <p className="font-poppins text-teal-600 mb-6 leading-relaxed text-sm flex-1">
+        <p className="font-poppins text-blue-600 mb-6 leading-relaxed text-sm flex-1">
           {member.bio}
         </p>
 
@@ -175,7 +177,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
               href={href}
               target={href.startsWith('http') ? '_blank' : '_self'}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="w-10 h-10 rounded-full flex items-center justify-center text-teal-600 bg-teal-100/60 border border-teal-200/50 hover:bg-teal-600 hover:text-white transition-colors duration-300"
+              className="w-10 h-10 rounded-full flex items-center justify-center text-blue-600 bg-blue-100/60 border border-blue-200/50 hover:bg-blue-600 hover:text-white transition-colors duration-300"
               aria-label={`Contact ${member.name} via ${label}`}
               initial={{ y: 40, opacity: 0 }}
               whileHover={{ y: 0, opacity: 1 }}
@@ -188,8 +190,8 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-4 right-4 w-2 h-2 bg-sage-400 rounded-full opacity-30 animate-pulse" />
-      <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-teal-400 rounded-full opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-4 right-4 w-2 h-2 bg-purple-400 rounded-full opacity-30 animate-pulse" />
+      <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-blue-400 rounded-full opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
     </motion.div>
   );
 };

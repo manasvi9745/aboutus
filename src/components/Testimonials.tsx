@@ -63,9 +63,10 @@ const Testimonials: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-4">
+          <h2 className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-4">
             Hope Found Again
           </h2>
-          <p className="text-xl font-poppins text-teal-700 max-w-3xl mx-auto">
+          <p className="text-xl font-poppins text-primary-700 max-w-3xl mx-auto">
             Real stories from real people who found more than just their belongings
           </p>
         </motion.div>
@@ -117,7 +118,7 @@ const Testimonials: React.FC = () => {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="text-lg md:text-xl font-poppins text-teal-700 mb-6 leading-relaxed italic">
+                    <blockquote className="text-lg md:text-xl font-poppins text-primary-700 mb-6 leading-relaxed italic">
                       "{testimonials[currentIndex].story}"
                     </blockquote>
 
@@ -125,22 +126,23 @@ const Testimonials: React.FC = () => {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                       <div>
                         <h4 className="font-nunito font-bold text-teal-600 text-lg">
+                        <h4 className="font-nunito font-bold text-primary-600 text-lg">
                           {testimonials[currentIndex].name}
                         </h4>
-                        <p className="font-poppins text-sage-500 text-sm">
+                        <p className="font-poppins text-secondary-500 text-sm">
                           {testimonials[currentIndex].role}
                         </p>
                       </div>
 
                       {/* Recovery Stats */}
                       <div className="mt-4 md:mt-0 flex gap-4">
-                        <div className="bg-sage-200 px-3 py-1 rounded-full">
-                          <span className="text-xs font-nunito font-semibold text-sage-700">
+                        <div className="bg-secondary-200 px-3 py-1 rounded-full">
+                          <span className="text-xs font-nunito font-semibold text-secondary-700">
                             {testimonials[currentIndex].item}
                           </span>
                         </div>
-                        <div className="bg-teal-200 px-3 py-1 rounded-full">
-                          <span className="text-xs font-nunito font-semibold text-teal-700">
+                        <div className="bg-primary-200 px-3 py-1 rounded-full">
+                          <span className="text-xs font-nunito font-semibold text-primary-700">
                             Recovered in {testimonials[currentIndex].timeToRecover}
                           </span>
                         </div>

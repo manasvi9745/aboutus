@@ -61,11 +61,11 @@ const HeroSection: React.FC = () => {
 
       {/* Title and Subtitle */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
-        <h1 className="text-5xl md:text-7xl font-nunito font-bold bg-gradient-to-r from-teal-500 to-sage-500 bg-clip-text text-transparent mb-6 leading-tight text-center">
-          Where Lost <span className="text-sage-500">Meets</span> Found
+        <h1 className="text-5xl md:text-7xl font-nunito font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-6 leading-tight text-center">
+          Where Lost <span className="text-secondary-500">Meets</span> Found
         </h1>
         
-        <p className="text-xl md:text-2xl font-poppins text-teal-600 leading-relaxed text-center max-w-4xl">
+        <p className="text-xl md:text-2xl font-poppins text-primary-600 leading-relaxed text-center max-w-4xl">
           Connecting communities through compassion, one lost item at a time.
           We're building a world where losing something doesn't mean losing hope.
         </p>

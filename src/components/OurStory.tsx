@@ -79,7 +79,7 @@ const OurStory: React.FC = () => {
             viewport={{ once: true }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-8 relative"
+              className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-8 relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,7 +87,7 @@ const OurStory: React.FC = () => {
             >
               Our Story
               <motion.div
-                className="absolute bottom-0 left-0 h-1 bg-sage-500 rounded-full"
+                className="absolute bottom-0 left-0 h-1 bg-secondary-500 rounded-full"
                 initial={{ width: 0 }}
                 whileInView={{ width: '100%' }}
                 transition={{ duration: 1.2, delay: 0.8 }}
@@ -97,7 +97,7 @@ const OurStory: React.FC = () => {
 
             <div className="space-y-6">
               <motion.p
-                className="text-lg font-poppins text-teal-700 leading-relaxed"
+                className="text-lg font-poppins text-primary-700 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -107,18 +107,18 @@ const OurStory: React.FC = () => {
               </motion.p>
 
               <motion.blockquote
-                className="text-xl font-poppins text-sage-600 italic relative pl-6 my-8"
+                className="text-xl font-poppins text-secondary-600 italic relative pl-6 my-8"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <div className="absolute left-0 top-0 w-1 h-full bg-sage-500 rounded-full"></div>
+                <div className="absolute left-0 top-0 w-1 h-full bg-secondary-500 rounded-full"></div>
                 "Why isn't there a simple way to reconnect lost items with their rightful people?"
               </motion.blockquote>
 
               <motion.p
-                className="text-lg font-poppins text-teal-700 leading-relaxed"
+                className="text-lg font-poppins text-primary-700 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -128,7 +128,7 @@ const OurStory: React.FC = () => {
               </motion.p>
 
               <motion.p
-                className="text-lg font-poppins text-teal-600 font-semibold leading-relaxed"
+                className="text-lg font-poppins text-primary-600 font-semibold leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
