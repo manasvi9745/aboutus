@@ -207,12 +207,8 @@ const JoinCommunity: React.FC = () => {
               <motion.button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-nunito font-bold py-4 px-8 rounded-xl transition-all duration-300"
-                style={{
-                  boxShadow: '0 0 15px rgba(59, 130, 246, 0.4)'
-                }}
                 whileHover={{ 
-                  scale: 1.06,
-                  boxShadow: '0 0 25px rgba(59, 130, 246, 0.6)'
+                  scale: 1.06
                 }}
                 whileTap={{ scale: 0.98 }}
               >

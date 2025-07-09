@@ -21,23 +21,34 @@ const AuroraCanvas: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
+    // Dark blue background
+    const drawBackground = () => {
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      gradient.addColorStop(0, '#1e3a8a'); // Dark blue top
+      gradient.addColorStop(0.5, '#1e40af'); // Medium dark blue
+      gradient.addColorStop(1, '#1d4ed8'); // Darker blue bottom
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    };
     // Aurora animation variables
     let time = 0;
     const layers = [
-      { speed: 0.5, amplitude: 50, frequency: 0.02, color: 'rgba(91, 124, 250, 0.3)' },
-      { speed: 0.7, amplitude: 70, frequency: 0.015, color: 'rgba(109, 110, 250, 0.25)' },
-      { speed: 0.3, amplitude: 40, frequency: 0.025, color: 'rgba(123, 97, 255, 0.2)' },
-      { speed: 0.9, amplitude: 60, frequency: 0.018, color: 'rgba(155, 232, 225, 0.15)' }
+      { speed: 0.5, amplitude: 50, frequency: 0.02, color: 'rgba(168, 85, 247, 0.6)' }, // Laser purple
+      { speed: 0.7, amplitude: 70, frequency: 0.015, color: 'rgba(147, 51, 234, 0.5)' }, // Deep purple
+      { speed: 0.3, amplitude: 40, frequency: 0.025, color: 'rgba(126, 58, 237, 0.4)' }, // Medium purple
+      { speed: 0.9, amplitude: 60, frequency: 0.018, color: 'rgba(196, 181, 253, 0.3)' } // Light purple
     ];
 
     // Draw aurora waves
     const drawAurora = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw dark blue background first
+      drawBackground();
       
       layers.forEach((layer, index) => {
         ctx.beginPath();
         ctx.strokeStyle = layer.color;
-        ctx.lineWidth = 3;
+        ctx.lineWidth = 4; // Slightly thicker for better visibility
         
         for (let x = 0; x <= canvas.width; x += 2) {
           const y = canvas.height / 2 + 
@@ -52,6 +63,12 @@ const AuroraCanvas: React.FC = () => {
         }
         
         ctx.stroke();
+        
+        // Add glow effect for laser purple waves
+        ctx.shadowColor = layer.color;
+        ctx.shadowBlur = 10;
+        ctx.stroke();
+        ctx.shadowBlur = 0;
       });
       
       time += 0.01;

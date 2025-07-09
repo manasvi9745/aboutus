@@ -44,11 +44,14 @@ const HeroSection: React.FC = () => {
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <motion.h1
           className="text-5xl md:text-7xl font-nunito font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent"
+          style={{
+            textShadow: '0 0 20px rgba(168, 85, 247, 0.8)'
+          }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          Where Lost <span className="text-[#9BE8E1]">Meets</span> Found
+          Where Lost <span className="text-[#A855F7]" style={{ textShadow: '0 0 30px #A855F7' }}>Meets</span> Found
         </motion.h1>
         
         <motion.p
