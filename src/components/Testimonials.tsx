@@ -100,7 +100,7 @@ const Testimonials: React.FC = () => {
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5, ease: 'easeOutQuad' }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="bg-gradient-to-br from-blue-50 to-white p-8 md:p-12"
               >
                 <div className="flex flex-col md:flex-row items-center gap-8">
