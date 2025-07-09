@@ -193,7 +193,6 @@ const OurValues: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-nunito font-bold text-teal-600 mb-4">
-          <h2 className="text-4xl md:text-5xl font-nunito font-bold text-primary-600 mb-4">
             Our Values
           </h2>
           <p className="text-xl font-poppins text-primary-700">
@@ -231,7 +230,6 @@ const OurValues: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                   >
-                    <h3 className="text-2xl md:text-3xl font-nunito font-bold text-teal-600 mb-4">
                     <h3 className="text-2xl md:text-3xl font-nunito font-bold text-primary-600 mb-4">
                       {values[activeValue].title}
                     </h3>
