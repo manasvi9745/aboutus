@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ConstellationCanvas from './ConstellationCanvas';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -216,6 +217,9 @@ const HeroSection: React.FC = () => {
         background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
       }}
     >
+      {/* Constellation Background */}
+      <ConstellationCanvas />
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div 
@@ -237,7 +241,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Title and Subtitle */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-5 px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
         <h1 className="text-5xl md:text-7xl font-nunito font-bold bg-gradient-to-r from-teal-500 to-sage-500 bg-clip-text text-transparent mb-6 leading-tight text-center">
           Where Lost <span className="text-sage-500">Meets</span> Found
         </h1>
@@ -249,7 +253,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Small Floating Cards - Initially Upside Down (exactly 180×260px) */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
+      <div className="absolute inset-0 flex items-center justify-center z-20">
         {/* Card 1 Wrapper - Manasvi (Back Side Visible) */}
         <div
           ref={card1WrapperRef}
