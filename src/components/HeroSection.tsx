@@ -3,16 +3,23 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown } from 'lucide-react';
-import AuroraCanvas from './AuroraCanvas';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const hero = heroRef.current;
+    const video = videoRef.current;
+    
     if (!hero) return;
+
+    // Auto-play video
+    if (video) {
+      video.play().catch(console.log);
+    }
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
@@ -37,21 +44,33 @@ const HeroSection: React.FC = () => {
       className="hero relative overflow-hidden flex items-center justify-center"
       style={{ height: '100vh' }}
     >
-      {/* Aurora Background */}
-      <AuroraCanvas />
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover opacity-30"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Video Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-900/70 to-blue-800/80"></div>
+      </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <motion.h1
-          className="text-5xl md:text-7xl font-nunito font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent"
-          style={{
-            textShadow: '0 0 20px rgba(168, 85, 247, 0.8)'
-          }}
+          className="text-5xl md:text-7xl font-nunito font-bold mb-6 leading-tight text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          Where Lost <span className="text-[#A855F7]" style={{ textShadow: '0 0 30px #A855F7' }}>Meets</span> Found
+          Where Lost <span className="text-purple-300">Meets</span> Found
         </motion.h1>
         
         <motion.p
@@ -65,18 +84,11 @@ const HeroSection: React.FC = () => {
         </motion.p>
 
         <motion.button
-          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-nunito font-bold rounded-xl text-lg transition-all duration-300"
-          style={{ 
-            boxShadow: '0 0 15px #00FFFF, 0 0 30px #00FFFF',
-            filter: 'drop-shadow(0 0 15px #00FFFF)'
-          }}
+          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-nunito font-bold rounded-xl text-lg transition-all duration-300 hover:shadow-lg"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          whileHover={{ 
-            scale: 1.05,
-            boxShadow: '0 0 25px #00FFFF, 0 0 50px #00FFFF'
-          }}
+          whileHover={{ scale: 1.05 }}
         >
           Join Our Community
         </motion.button>
