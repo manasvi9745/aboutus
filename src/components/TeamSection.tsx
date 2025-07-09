@@ -142,7 +142,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
             />
           </motion.div>
         </div>
-          </div>
 
         {/* Name */}
         <h3 className="text-xl font-nunito font-bold text-teal-800 mb-3">
